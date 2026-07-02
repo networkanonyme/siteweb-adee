@@ -1,0 +1,302 @@
+/* =========================
+   ADEE - STYLE GLOBAL
+========================= */
+
+:root {
+  --blue: #26384f;
+  --blue-dark: #182638;
+  --green: #b7bea4;
+  --white: #ffffff;
+  --light: #f5f7fa;
+  --text: #1f2933;
+  --gray: #6b7280;
+  --radius: 18px;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding-top: 76px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: var(--white);
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  min-height: 76px;
+}
+
+.navbar-brand {
+  color: var(--blue);
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+}
+
+.nav-link {
+  color: var(--blue-dark);
+  font-weight: 500;
+  margin-left: 12px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--green);
+}
+
+/* =========================
+   HERO ACCUEIL
+========================= */
+
+.hero {
+  min-height: calc(100vh - 76px);
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, var(--light), #ffffff);
+  padding: 70px 0;
+}
+
+.hero h1 {
+  color: var(--blue-dark);
+}
+
+.hero p {
+  color: var(--gray);
+  max-width: 600px;
+}
+
+.hero img {
+  width: 100%;
+  max-width: 430px;
+}
+
+/* =========================
+   HERO PAGES
+========================= */
+
+.page-hero {
+  background: linear-gradient(135deg, var(--blue), var(--blue-dark));
+  color: var(--white);
+  padding: 90px 0;
+}
+
+.page-hero p {
+  max-width: 720px;
+  margin: auto;
+}
+
+/* =========================
+   BOUTONS
+========================= */
+
+.btn-primary {
+  background: var(--blue);
+  border-color: var(--blue);
+  border-radius: 999px;
+  padding: 12px 26px;
+}
+
+.btn-primary:hover {
+  background: var(--blue-dark);
+  border-color: var(--blue-dark);
+}
+
+.btn-outline-dark {
+  border-radius: 999px;
+  padding: 12px 26px;
+  margin-left: 10px;
+}
+
+.btn-light {
+  border-radius: 999px;
+  padding: 12px 26px;
+}
+
+/* =========================
+   SECTIONS / CARTES
+========================= */
+
+section {
+  position: relative;
+}
+
+.card {
+  border: none;
+  border-radius: var(--radius);
+  transition: 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow);
+}
+
+.card-body {
+  padding: 28px;
+}
+
+.mission-card h4 {
+  color: var(--blue);
+  margin-bottom: 12px;
+}
+
+.about-logo {
+  max-width: 360px;
+}
+
+/* =========================
+   STATS
+========================= */
+
+.stat-box {
+  background: var(--light);
+  border-radius: var(--radius);
+  padding: 32px 20px;
+  height: 100%;
+}
+
+.stat-box h3 {
+  color: var(--blue);
+  font-size: 2.4rem;
+  font-weight: 800;
+}
+
+.stat-box p {
+  color: var(--gray);
+  margin-bottom: 0;
+}
+
+/* =========================
+   COULEURS BOOTSTRAP CUSTOM
+========================= */
+
+.bg-primary {
+  background-color: var(--blue) !important;
+}
+
+.bg-light {
+  background-color: var(--light) !important;
+}
+
+.bg-dark {
+  background-color: var(--blue-dark) !important;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer p {
+  margin-bottom: 6px;
+  color: #d8dee9;
+}
+
+/* =========================
+   RESPONSIVE TABLETTE
+========================= */
+
+@media (max-width: 991px) {
+  body {
+    padding-top: 70px;
+  }
+
+  .navbar {
+    min-height: 70px;
+  }
+
+  .nav-link {
+    margin-left: 0;
+    padding: 10px 0;
+  }
+
+  .hero {
+    text-align: center;
+    padding: 60px 0;
+  }
+
+  .hero p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero img {
+    margin-top: 40px;
+    max-width: 320px;
+  }
+
+  .btn-outline-dark {
+    margin-left: 0;
+    margin-top: 12px;
+  }
+}
+
+/* =========================
+   RESPONSIVE MOBILE
+========================= */
+
+@media (max-width: 576px) {
+  body {
+    padding-top: 66px;
+  }
+
+  .navbar-brand {
+    font-size: 1.35rem;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 50px 0;
+  }
+
+  .hero h1,
+  .page-hero h1 {
+    font-size: 2.1rem;
+  }
+
+  .hero p,
+  .page-hero p {
+    font-size: 1rem;
+  }
+
+  .page-hero {
+    padding: 60px 0;
+  }
+
+  .btn-lg {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .card-body {
+    padding: 22px;
+  }
+
+  .stat-box {
+    padding: 24px 16px;
+  }
+
+  footer {
+    font-size: 0.9rem;
+  }
+}
